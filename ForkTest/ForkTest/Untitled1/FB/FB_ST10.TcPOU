@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_ST10" Id="{69545744-4ffd-44e8-84c0-cbb5f2cc935d}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ST10
+VAR
+	_Camera : BOOL;
+	_Scanner : BOOL;
+	_triger : BOOL;
+	_busy  : BOOL;
+	_desc : STRING;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="_camera" Id="{0be8627e-1fb1-44dc-8173-3e82e3599b26}">
+      <Declaration><![CDATA[METHOD PROTECTED _camera
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF _Camera THEN 
+	_desc:= 'Camera ready';
+ELSIF _triger THEN 
+	_desc:= 'Triger';
+ELSE
+	_busy:= FALSE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_ST10">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ST10._camera">
+      <LineId Id="5" Count="1" />
+      <LineId Id="8" Count="3" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
