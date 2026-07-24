@@ -2,18 +2,50 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="FB_ST10" Id="{61144e30-0e02-44e4-a1c9-c2000a6e1c68}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_ST10
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
 VAR
+	_camera : BOOL;
+	_triger : BOOL;
+	_description : STRING;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
+    <Method Name="_camera" Id="{607f1da7-acd9-442b-8e19-2806946f35ab}">
+      <Declaration><![CDATA[METHOD PROTECTED _camera
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF _camera THEN 
+	_description:= 'On';
+ELSE 
+	_triger:= TRUE; 
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="_scanner" Id="{4ecb456b-c5dd-44ea-a517-3dca9868e0e9}">
+      <Declaration><![CDATA[METHOD _scanner : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF _triger THEN 
+	_description:= 'Trger scanner'; 
+END_IF]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="FB_ST10">
       <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ST10._camera">
+      <LineId Id="5" Count="1" />
+      <LineId Id="8" Count="1" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ST10._scanner">
+      <LineId Id="5" Count="0" />
+      <LineId Id="9" Count="1" />
     </LineIds>
   </POU>
 </TcPlcObject>
