@@ -8,8 +8,6 @@ VAR
 	_description : STRING;
 	_test : BOOL;
 	_cameraProgram : UINT;
-	_test3  : BOOL;
-	_test1 : INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
