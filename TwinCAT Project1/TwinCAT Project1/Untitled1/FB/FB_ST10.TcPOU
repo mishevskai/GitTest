@@ -31,7 +31,7 @@ END_VAR
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[IF _triger THEN 
-	_description:= 'Trger scanner'
+	_description:= 'Trger scanner';
 END_IF]]></ST>
       </Implementation>
     </Method>
