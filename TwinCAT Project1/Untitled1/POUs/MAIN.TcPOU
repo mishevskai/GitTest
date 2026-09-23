@@ -4,15 +4,23 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	_fb : FB_ST10; 
+	_ivana: BOOL;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[_fb._scanner();
-_fb.stole:= true; ]]></ST>
+IF  _fb.stole THEN 
+	_ivana:= TRUE; 
+ELSE 
+	_ivana:= false;
+END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
-      <LineId Id="7" Count="0" />
+      <LineId Id="7" Count="1" />
+      <LineId Id="12" Count="1" />
+      <LineId Id="9" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
