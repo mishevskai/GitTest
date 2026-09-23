@@ -12,6 +12,7 @@ VAR
 	_git : INT;
 	_ivana : INT;
 	_newVariable : BOOL; 
+	_testvariable : BOOL; 
 	
 END_VAR
 ]]></Declaration>
@@ -48,7 +49,12 @@ END_VAR
 END_IF
 _gitTest:= TRUE; 
 _ivana := 5;
-]]></ST>
+IF _test THEN 
+	_testvariable:= TRUE;
+ELSE 
+	_testvariable:= FALSE; 
+	
+END_IF]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="FB_ST10">
@@ -67,6 +73,10 @@ _ivana := 5;
       <LineId Id="9" Count="1" />
       <LineId Id="14" Count="0" />
       <LineId Id="18" Count="1" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="26" Count="1" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="24" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
