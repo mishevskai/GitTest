@@ -13,7 +13,10 @@ VAR
 	_ivana : INT;
 	_newVariable : BOOL; 
 	_testvariable : BOOL; 
-	
+	_ne : REAL;
+	_number : INT; 
+	_ati : BOOL; 
+	_a : INT; 
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -35,7 +38,8 @@ END_IF
 
 IF _newVariable THEN 
 	_ivana:= 5; 
-END_IF]]></ST>
+END_IF
+_ati:= TRUE; ]]></ST>
       </Implementation>
     </Method>
     <Method Name="_scanner" Id="{4ecb456b-c5dd-44ea-a517-3dca9868e0e9}">
@@ -67,6 +71,7 @@ END_IF]]></ST>
       <LineId Id="16" Count="0" />
       <LineId Id="15" Count="0" />
       <LineId Id="17" Count="1" />
+      <LineId Id="24" Count="0" />
     </LineIds>
     <LineIds Name="FB_ST10._scanner">
       <LineId Id="5" Count="0" />
