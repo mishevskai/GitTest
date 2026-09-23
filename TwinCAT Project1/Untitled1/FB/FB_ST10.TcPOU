@@ -18,6 +18,7 @@ VAR
 	_ati : BOOL; 
 	_a : INT; 
 	_i : BOOL; 
+	_stole : BOOL; 
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -64,6 +65,17 @@ ELSE
 END_IF]]></ST>
       </Implementation>
     </Method>
+    <Property Name="stole" Id="{407b75d3-7943-40a4-a8f0-5a22a862d8ca}">
+      <Declaration><![CDATA[PROPERTY stole : BOOL]]></Declaration>
+      <Get Name="Get" Id="{30064fa2-406e-4ef1-af6a-e0330b0ad46e}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[stole:= _stole;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
     <Property Name="test1" Id="{8adf1656-42ca-41a4-b467-f81f72cab5bc}">
       <Declaration><![CDATA[PROPERTY test1 : BOOL]]></Declaration>
       <Get Name="Get" Id="{c1bac35b-1ca8-467d-ae8c-6b256b1c1833}">
@@ -97,6 +109,9 @@ END_VAR
       <LineId Id="26" Count="1" />
       <LineId Id="25" Count="0" />
       <LineId Id="24" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ST10.stole.Get">
+      <LineId Id="2" Count="0" />
     </LineIds>
     <LineIds Name="FB_ST10.test1.Get">
       <LineId Id="2" Count="0" />
