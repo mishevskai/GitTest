@@ -17,6 +17,7 @@ VAR
 	_number : INT; 
 	_ati : BOOL; 
 	_a : INT; 
+	_i : BOOL; 
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -39,7 +40,9 @@ END_IF
 IF _newVariable THEN 
 	_ivana:= 5; 
 END_IF
-_ati:= TRUE; ]]></ST>
+_ati:= TRUE; 
+_number:= 4; 
+_ne:= 5.6;]]></ST>
       </Implementation>
     </Method>
     <Method Name="_scanner" Id="{4ecb456b-c5dd-44ea-a517-3dca9868e0e9}">
@@ -61,6 +64,17 @@ ELSE
 END_IF]]></ST>
       </Implementation>
     </Method>
+    <Property Name="test1" Id="{8adf1656-42ca-41a4-b467-f81f72cab5bc}">
+      <Declaration><![CDATA[PROPERTY test1 : BOOL]]></Declaration>
+      <Get Name="Get" Id="{c1bac35b-1ca8-467d-ae8c-6b256b1c1833}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[test1:= _testvariable; ]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
     <LineIds Name="FB_ST10">
       <LineId Id="9" Count="0" />
     </LineIds>
@@ -72,6 +86,7 @@ END_IF]]></ST>
       <LineId Id="15" Count="0" />
       <LineId Id="17" Count="1" />
       <LineId Id="24" Count="0" />
+      <LineId Id="30" Count="1" />
     </LineIds>
     <LineIds Name="FB_ST10._scanner">
       <LineId Id="5" Count="0" />
@@ -82,6 +97,9 @@ END_IF]]></ST>
       <LineId Id="26" Count="1" />
       <LineId Id="25" Count="0" />
       <LineId Id="24" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ST10.test1.Get">
+      <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
