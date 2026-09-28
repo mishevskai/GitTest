@@ -24,7 +24,9 @@ END_VAR
       <Implementation>
         <ST><![CDATA[IF _camera THEN 
 	_description:= 'On';
+	_cameraProgram:= 1;
 ELSE 
+	_cameraProgram:= 5; 
 	_triger:= TRUE; 
 END_IF]]></ST>
       </Implementation>
@@ -39,8 +41,7 @@ END_VAR
 	_description:= 'Trger scanner';
 END_IF
 _gitTest:= TRUE; 
-_ivana := 5;
-]]></ST>
+_ivana := 5;]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="FB_ST10">
@@ -48,14 +49,17 @@ _ivana := 5;
     </LineIds>
     <LineIds Name="FB_ST10._camera">
       <LineId Id="5" Count="1" />
-      <LineId Id="8" Count="1" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="9" Count="0" />
       <LineId Id="7" Count="0" />
     </LineIds>
     <LineIds Name="FB_ST10._scanner">
       <LineId Id="5" Count="0" />
       <LineId Id="9" Count="1" />
       <LineId Id="14" Count="0" />
-      <LineId Id="18" Count="1" />
+      <LineId Id="18" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
