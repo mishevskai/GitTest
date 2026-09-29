@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_ST10b" Id="{6ce20a51-ab97-4003-969b-df3949d611fe}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ST10b
+VAR
+	_test : BOOL; 
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="_test" Id="{41f4d043-bc9c-467f-be6d-604ea26985e1}">
+      <Declaration><![CDATA[METHOD _test : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_test:= TRUE; ]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_ST10b">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ST10b._test">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

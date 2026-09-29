@@ -11,7 +11,9 @@ VAR
 	_gitTest : BOOL;
 	_git : INT;
 	_ivana : INT;
-	_stole : INT;
+	_var : INT; 
+	_i : INT; 
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -29,7 +31,18 @@ END_VAR
 ELSE 
 	_cameraProgram:= 5; 
 	_triger:= TRUE; 
-END_IF]]></ST>
+END_IF
+
+_var:= 55;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="_robot" Id="{b48c7637-b031-4ad9-ac02-a85e4c60f34b}">
+      <Declaration><![CDATA[METHOD _robot : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
     <Method Name="_scanner" Id="{4ecb456b-c5dd-44ea-a517-3dca9868e0e9}">
@@ -45,6 +58,25 @@ _gitTest:= TRUE;
 _ivana := 5;]]></ST>
       </Implementation>
     </Method>
+    <Method Name="_tcpIp" Id="{be6abaee-279d-47c7-a913-8647ca8d369f}">
+      <Declaration><![CDATA[METHOD _tcpIp
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_test:= TRUE; 
+_ivana:= 5;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="_test" Id="{b5ce4c90-a4ce-4797-9730-4f1d10a336ca}">
+      <Declaration><![CDATA[METHOD _test : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="FB_ST10">
       <LineId Id="9" Count="0" />
     </LineIds>
@@ -55,12 +87,23 @@ _ivana := 5;]]></ST>
       <LineId Id="14" Count="0" />
       <LineId Id="9" Count="0" />
       <LineId Id="7" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="18" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ST10._robot">
+      <LineId Id="5" Count="0" />
     </LineIds>
     <LineIds Name="FB_ST10._scanner">
       <LineId Id="5" Count="0" />
       <LineId Id="9" Count="1" />
       <LineId Id="14" Count="0" />
       <LineId Id="18" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ST10._tcpIp">
+      <LineId Id="5" Count="1" />
+    </LineIds>
+    <LineIds Name="FB_ST10._test">
+      <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

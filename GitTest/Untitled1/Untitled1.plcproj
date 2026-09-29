@@ -20,6 +20,9 @@
     <Compile Include="FB\FB_ST10.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="FB\FB_ST10b.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
