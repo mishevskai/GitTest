@@ -6,6 +6,7 @@ VAR
 	_fb : FB_ST10; 
 	_test : BOOL;
 	_promenliva : BOOL; 
+	_ivana : INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -20,7 +21,7 @@ IF _fb._scanner() THEN
 	_promenliva:= TRUE; 
 	_test:= FALSE; 
 END_IF
-]]></ST>
+_ivana:= 10; ]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
