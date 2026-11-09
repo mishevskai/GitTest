@@ -6,7 +6,6 @@ VAR
 	_fb : FB_ST10; 
 	_test : BOOL;
 	_promenliva : BOOL; 
-	_newVariable : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -21,8 +20,7 @@ IF _fb._scanner() THEN
 	_promenliva:= TRUE; 
 	_test:= FALSE; 
 END_IF
-
-_newVariable:= TRUE; ]]></ST>
+]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
@@ -34,7 +32,6 @@ _newVariable:= TRUE; ]]></ST>
       <LineId Id="18" Count="0" />
       <LineId Id="28" Count="0" />
       <LineId Id="19" Count="1" />
-      <LineId Id="37" Count="0" />
       <LineId Id="36" Count="0" />
     </LineIds>
   </POU>
